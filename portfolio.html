@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<head>
+<style>
+.buttons{
+    background-color: rgba(61, 255, 190, 0.9);
+    color:rgb(28, 28, 30);
+    border: none;
+    font-style: normal;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 120px;
+    margin-left: 50px;
+    padding: 15px 40px;
+    border-radius: 10px;
+    font-size: 33px;
+    cursor:pointer;
+    font-weight: 630;
+    width: 308px;
+    height: 76px;
+    display: block;
+    transition: all 0.2s ease;
+}
+
+.buttons:hover {
+    transform: translateY(-5px);
+    box-shadow: 5px 5px 15px rgba(37, 227, 164, 0.5), -5px -5px 15px rgba(37, 227, 164, 0.5) ;
+}   
+
+.description-text{
+    font-family: monospace;
+    font-size: 25px;
+    text-align:left;
+    color: rgb(255, 255, 255);
+    position:absolute;
+}
+
+.contact-info{
+    font-size: 30px;
+}
+
+.header{
+    font-family: monospace;
+    font-weight:600;
+    font-size: 60px;
+    text-align: left;
+    color:rgb(28, 28, 30);
+    padding-top:35px;
+    padding-left:65px;
+    background-color: rgba(61, 255, 190, 0.9);
+    display: block;
+    height: 70px;
+}
+
+.body1{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;   
+    margin-right: 0px;
+    background-color: rgb(28, 28, 30);
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.buttons-class{
+    width:400px;
+    height: 300px;
+    display:inline-block;
+    vertical-align: top;
+    margin-top: 35px;
+    }
+.description{
+    width: 750px;
+    height: 300px;
+    display: inline-block;
+    vertical-align: top;
+    text-align:left;
+    margin-block:;
+    margin-left: 60px;
+    margin-top: 30px;
+    transition: all 0.7s ease;
+    opacity: 1;
+}
+
+.description.not-active{
+    transform: translateX(-680px);
+    opacity:0;
+}
+
+
+.profile_pic{
+    display:flex;  
+    width: 600px;
+    height: 280px;
+}
+
+.pfp{
+    width: 100%;
+    border-radius: 15px;
+    transition: box-shadow 0.2s ease;
+}
+.pfp:hover{
+    box-shadow: 5px 5px 15px rgba(37, 227, 164, 0.5), -5px -5px 15px rgba(37, 227, 164, 0.5);
+}
+.tab-contents{
+    position:absolute;
+    top:110px;
+    transform: translateX(680px);
+    transition: all 0.7s eases;
+    opacity: 0;
+}
+.tab-contents.active-tab{
+    position: absolute;
+    top:110px;
+    transform: translateX(0px);
+    transition: all 0.7s;
+    opacity:1;
+}
+
+.tab-contents ul li span{
+    color: rgba(61, 255, 190, 0.5);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-size: 50px;
+}
+
+.tab-contents ul li{
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    display: block;
+}
+
+.tab-contents ul li a{
+    color: white;
+}
+
+.arrow-btn{
+    background-color: rgb(28, 28, 30);
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px 10px;
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.arrow-btn:hover {
+color:rgb(61, 255, 190);
+font-size: 40px;
+}    
+</style>
+</head>
+<body class="body1">
+<font color="W" size="9">
+<div class="header">Anirudh's Portfolio</div>
+</font>
+<div class="description">
+    <div class="profile_pic">
+        <img class="pfp" src="pfp1/bw_pfp_2.png">
+    </div>
+    <div>
+        <p class="description-text">
+        Hi my name is <span style="color: rgba(61, 255, 190, 0.9)"> Anirudh Dharane</span>!  <br>
+        I'm studying computer science at PESU.<br>
+        <br>
+        This is my portfolio containing <br>everything about me.<br>
+        <br>
+        Hope you find my work interesting!<br>
+        <br>
+        <br>
+        <span style="color:rgba(61, 255, 190, 0.5); font-size: 30px; margin-bottom: 15px; display:inline-block">Want to reach out?</span><br>
+        You can contact me at<br>
+        Mail: <span style="color: rgba(61, 255, 190, 0.5)">dharaneanirudh@gmail.com</span><br>
+        Phone number: <span style="color: rgba(61, 255, 190, 0.5); margin-bottom: 20px; display:inline-block">+91 9036480555</span><br>
+        </p>
+    </div>
+</div>
+<div class="tab-contents" id="experience-tab">
+    <button class="arrow-btn" onclick="goback()">←</button>
+    <ul>
+        <li><span>Nexus website</span><br>Built a static nexus webpage</li>
+        <li><span>Lunix social media manager</span><br>Grew an <a href="https://www.instagram.com/lunix.in/" target="_blank">instagram page</a> to 9k active followers</li>
+        <li><span>Github projects</span><br>You can look into my <a href="https://github.com/anirudhdharane1" target="_blank">github</a> </li>
+    </ul>
+</div>
+<div class="tab-contents" id="education-tab">
+    <button class="arrow-btn" onclick="goback()">←</button>
+    <ul>
+        <li><span> 2024-2028</span><br>PESU BTech in Computer science</li>
+        <li><span>2022-2024</span><br>JEE coaching at Sri chaitanya</li>
+    </ul>
+</div>
+<div class="tab-contents" id="skills-tab">
+    <button class="arrow-btn" onclick="goback()">←</button>
+    <ul>
+        <li><span>HTML-CSS</span><br>Web development</li>
+        <li><span>Python</span><br>Basic python <a href="https://www.hackerrank.com/certificates/798fcf05ba16" target="_blank">certification<a> in hackerrank</li>
+        <li><span>Algorithmic option selling</span><br>Paper trading using both algorithims and manually</li>
+        <li><span>Social Media management</span><br>Building and growing active instagram pages</li>
+    </ul>
+</div>
+
+</div>
+<div class="buttons-class">
+    <button class="buttons" onclick="opentab('experience-tab')">
+        My experience
+    </button>
+    <button class="buttons" onclick="opentab('education-tab')">
+        My education
+    </button>
+    <button class="buttons" onclick="opentab('skills-tab')">
+        My skills
+    </button>
+
+</div>
+
+<script>
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tabcontent of tabcontents){ 
+        tabcontent.classList.remove("active-tab"); 
+        }
+        document.getElementById(tabname).classList.add("active-tab");
+        document.querySelector(".description").classList.add("not-active");
+        }
+    function goback(){
+        for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab"); 
+        }
+        document.querySelector(".description").classList.remove("not-active");
+        
+        }
+</script>
+
+</body>
+</html>
